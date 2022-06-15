@@ -2,12 +2,14 @@ let environment = {};
 
 environment.development = {
     envName : 'development',
-    port : 3000
+    httpPort : 3000,
+    httpsPort: 3001,
 }
 
 environment.production = {
     envName : 'production',
-    port : 5000
+    httpPort : 5000,
+    httpsPort: 5001,
 }
 
 let specified_environment = typeof(process.env.ENV_NAME) == 'string'? process.env.ENV_NAME : 'default';
